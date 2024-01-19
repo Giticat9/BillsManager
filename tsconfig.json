@@ -1,0 +1,27 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"target": "ES6",
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"jsx": "react",
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": false,
+		"noEmit": true,
+		"strict": true,
+		"allowJs": false,
+		"allowSyntheticDefaultImports": true,
+		"preserveConstEnums": true,
+		"sourceMap": true,
+		"baseUrl": ".",
+		"typeRoots": ["./node_modules/@types", "./src/@types"]
+	},
+	"ts-node": {
+		"compilerOptions": {
+			"module": "CommonJS"
+		}
+	}
+}
