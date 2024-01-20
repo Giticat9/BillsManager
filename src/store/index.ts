@@ -1,8 +1,10 @@
 import { Middleware } from 'redux';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
+import { default as appReducer } from './slices/appSlice';
+import REDUCER_NAMES from '../constants/reducerNames';
 
-const combinedReducers = combineReducers({});
+const combinedReducers = combineReducers({ [REDUCER_NAMES.Application]: appReducer });
 
 const middlewares: Middleware[] = [];
 if (process.env.NODE_ENV === 'development') {
@@ -14,7 +16,7 @@ if (process.env.NODE_ENV === 'development') {
 const store = configureStore({
 	reducer: combinedReducers,
 	middleware: getDefaultMiddlewares => getDefaultMiddlewares().concat(middlewares),
-	devTools: process.env.NODE_ENV === 'production'
+	devTools: process.env.NODE_ENV === 'development'
 });
 
 export { store };
