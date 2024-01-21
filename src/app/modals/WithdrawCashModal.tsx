@@ -40,7 +40,7 @@ const WithdrawCashModal: React.FC<IProps> = props => {
 	return (
 		<Modal
 			open={isShow}
-			title='Снятие суммы с баланса'
+			title='Снятие суммы со счета'
 			onCancel={onClose}
 			footer={[
 				<Button

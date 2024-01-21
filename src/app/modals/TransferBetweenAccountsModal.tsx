@@ -101,7 +101,7 @@ const TransferBetweenAccountModal: React.FC<IProps> = props => {
 					onChange={handlerChangeSelect}
 					style={{ width: '100%' }}
 				/>
-				Введите сумму, которую необходимо внести на счет
+				Введите сумму, которую необходимо перевести на счет
 				<Input
 					placeholder='Введите сумму'
 					min={0}
